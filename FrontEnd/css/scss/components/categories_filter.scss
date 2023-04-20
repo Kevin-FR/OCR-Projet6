@@ -1,0 +1,25 @@
+
+#gallery_filter{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.category__filter{
+    padding: 5px;
+    margin: 5px;
+    color: $btn-primary-color-font;
+    border: 1px solid $btn-primary-color;
+    border-radius: 15px;
+    font-family: 'Syne';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    &:hover{
+        color: white;
+        background-color: $btn-primary-color;
+        cursor: pointer;
+    }
+}
