@@ -1,0 +1,44 @@
+.login{
+    display: flex;
+    flex-direction: column;
+    max-width: 360px;
+    margin: auto;
+    text-align: center;
+    input{
+        padding: 10px;
+        margin-bottom: 5px;
+        &:focus{
+            outline: none;
+        }
+        
+    }
+    label{
+        text-align: left;
+        font-family: 'Work Sans';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        margin-bottom: 5px;
+    }
+    span{
+        font-family: 'Syne';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 36px;
+        color: $primary-color-font;
+        margin-bottom: 10px;
+    }
+
+    &__btn__submit{
+        background-color: $btn-primary-color;
+        border: 0;
+    }
+
+    &__input{
+        border-style: none;
+        box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+        background-color: white;
+    }
+}

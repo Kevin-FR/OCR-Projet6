@@ -1,3 +1,6 @@
+$primary-color : #1d6154;
 $background-color: #fffef8;
-$btn-primary-color : #1d6154;
-$btn-primary-color-font : #1d6154;
+$btn-primary-color : $primary-color;
+$btn-primary-color-font : $primary-color;
+$primary-color-font : $primary-color;
+
