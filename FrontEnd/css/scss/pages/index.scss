@@ -1,3 +1,24 @@
 .display__none{
     display: none;
 }
+
+.nav{
+    li{
+        cursor: pointer;
+    }
+}
+
+
+.portfolio__title{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+	margin-bottom: 1em;
+    align-items: center;
+    i{
+        margin-left: 15px;
+    }
+    span{
+        cursor: pointer;
+    }
+}

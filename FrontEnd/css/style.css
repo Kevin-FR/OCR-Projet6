@@ -98,10 +98,13 @@ table {
 
 /** end reset css**/
 body {
-  max-width: 1140px;
-  margin: auto;
   font-family: "Work Sans";
   font-size: 14px;
+}
+
+.container {
+  max-width: 1140px;
+  margin: auto;
 }
 
 header {
@@ -150,6 +153,7 @@ nav li {
 a {
   text-decoration: none;
   color: black;
+  cursor: pointer;
 }
 
 li:hover {
@@ -181,11 +185,6 @@ li:hover {
 
 #introduction p {
   margin-bottom: 0.5em;
-}
-
-#portfolio h2 {
-  text-align: center;
-  margin-bottom: 1em;
 }
 
 .gallery {
@@ -287,8 +286,181 @@ footer nav ul {
   line-height: 19px;
 }
 
+.admin__nav {
+  position: sticky;
+  top: 0;
+  margin: 0;
+}
+.admin__nav--connected {
+  background-color: black;
+  width: 100%;
+  height: 59px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.admin__nav--connected li {
+  cursor: pointer;
+  color: white;
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  padding: 10px;
+  border-radius: 15px;
+}
+.admin__nav--connected li:hover {
+  color: black;
+  background-color: white;
+}
+
+.portfolio__modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+.portfolio__modal button {
+  font-family: "Syne";
+  font-weight: 700;
+  color: white;
+  background-color: #1D6154;
+  margin: 23px 0;
+  width: 180px;
+  text-align: center;
+  border-radius: 60px;
+  height: 36px;
+}
+.portfolio__modal span {
+  right: 0;
+  top: 0;
+  position: absolute;
+  margin: 20px;
+}
+.portfolio__modal a {
+  font-family: "Syne";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #D65353;
+}
+.portfolio__modal__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 60px;
+  border: 1px solid #888;
+  width: 80%;
+  border-radius: 10px;
+  height: 730px;
+  width: 630px;
+}
+.portfolio__modal__modify {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.portfolio__modal__modify h2 {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 30px;
+  text-align: center;
+  color: #000000;
+}
+.portfolio__modal__close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.portfolio__modal__close:hover, .portfolio__modal__close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.portfolio__modal__galleries {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: auto;
+}
+.portfolio__modal__galleries a {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  color: #000000;
+  margin-left: 10px;
+}
+.portfolio__modal__galleries::after {
+  content: "";
+  height: 2px;
+  width: 100%;
+  background: #000;
+  top: 0;
+  left: 0;
+}
+.portfolio__modal__gallery__image {
+  position: relative;
+  margin: 10px;
+}
+.portfolio__modal__gallery__image img {
+  max-width: 80px;
+}
+.portfolio__modal__gallery__image i {
+  float: right;
+  right: 0;
+  top: 0;
+  color: white;
+  background-color: black;
+  padding: 3px;
+  border-radius: 3px;
+  margin: 3px;
+}
+.portfolio__modal__gallery__icons {
+  position: absolute;
+  right: 0;
+}
+.portfolio__modal__btn {
+  display: flex;
+  flex-direction: column;
+}
+
 .display__none {
   display: none;
+}
+
+.nav li {
+  cursor: pointer;
+}
+
+.portfolio__title {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 1em;
+  align-items: center;
+}
+.portfolio__title i {
+  margin-left: 15px;
+}
+.portfolio__title span {
+  cursor: pointer;
 }
 
 .login {

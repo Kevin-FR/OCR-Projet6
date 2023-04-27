@@ -8,7 +8,7 @@ const form = {
   
   let button = form.submit.addEventListener("click", (e) => {
     e.preventDefault();
-    const login = api_url + "user/login";
+    const login = api_url + "users/login";
   
     fetch(login, {
       method: "POST",
@@ -25,11 +25,13 @@ const form = {
       .then((data) => {
         console.log(data);
         if (data.error) {
-          alert("Error Password or Username"); /*displays error message*/
+          alert("Erreur dans l’identifiant ou le mot de passe"); /*displays error message*/
         } else {
-          window.open(
-            "index.html"
-          ); /*opens the target page while Id & password matches*/
+            localStorage.setItem("auth", 1);
+            localStorage.setItem("userId", data.userId);
+            localStorage.setItem("token", data.token);
+            window.location.href="/";
+          
         }
       })
       .catch((err) => {

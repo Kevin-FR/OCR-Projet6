@@ -49,10 +49,12 @@ table {
 }
 /** end reset css**/
 body {
-	max-width: 1140px;
-	margin:auto;
 	font-family: 'Work Sans' ;
 	font-size: 14px;
+}
+.container{
+	max-width: 1140px;
+	margin:auto;
 }
 header {
 	display: flex;
@@ -99,6 +101,7 @@ nav li {
 a {
 	text-decoration: none;
 	color: black;
+	cursor: pointer;
 }
 li:hover {
 	color: #B1663C;
@@ -126,10 +129,7 @@ li:hover {
 #introduction p {
 	margin-bottom: 0.5em;
 }
-#portfolio h2 {
-	text-align: center;
-	margin-bottom: 1em;
-}
+
 .gallery {
 	width: 100%;
 	display: grid;
