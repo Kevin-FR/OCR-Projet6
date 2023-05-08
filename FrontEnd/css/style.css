@@ -197,6 +197,9 @@ li:hover {
 
 .gallery img {
   width: 100%;
+  max-width: 330px;
+  max-height: 440px;
+  object-fit: cover;
 }
 
 #contact {
@@ -298,10 +301,9 @@ footer nav ul {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  color: white;
 }
 .admin__nav--connected li {
-  cursor: pointer;
-  color: white;
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 400;
@@ -310,7 +312,11 @@ footer nav ul {
   padding: 10px;
   border-radius: 15px;
 }
-.admin__nav--connected li:hover {
+
+.btn {
+  cursor: pointer;
+}
+.btn__publish {
   color: black;
   background-color: white;
 }
@@ -413,6 +419,8 @@ footer nav ul {
 }
 .modal__gallery__image img {
   max-width: 80px;
+  max-height: 106px;
+  object-fit: cover;
 }
 .modal__gallery__image i {
   float: right;
