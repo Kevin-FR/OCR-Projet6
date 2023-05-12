@@ -3,6 +3,7 @@ const api_url = "http://localhost:5678/api/";
 const btnCategories = document.getElementById('gallery_filter');
 const showGallery = document.querySelector(".gallery");
 const btnNavLogin = document.getElementById('btnLogin');
+const btnModify = document.getElementsByClassName('admin__modify__link');
 let dataWorks = window.localStorage.getItem("works");
 let dataCategories = window.localStorage.getItem("categories");
 
@@ -109,13 +110,6 @@ const displayGalleries = (idCat = 0) => {
   }
   
 
-
-
-
-
-
-
-
   // Afficher les "works" si on est sur l'index
   if (btnCategories) { displayGalleries() }
 
@@ -134,10 +128,13 @@ const displayGalleries = (idCat = 0) => {
   const adminNav = document.querySelector('body');
   
   if (localStorage.getItem("auth") === "1") {
+    for (let i = 0; i < btnModify.length; i++) {
+      btnModify[i].style.display = "block";
+    }
     adminNav.insertAdjacentHTML("beforebegin", `
     <nav class="admin__nav admin__nav--connected">
       <ul>
-        <li>Mode édition</li>
+        <li><i class="fa-solid fa-pen-to-square"></i> Mode édition</li>
         <li class="btn__publish">Publier les changements</li>
       </ul>
     </nav>

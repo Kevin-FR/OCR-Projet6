@@ -22,3 +22,21 @@
         cursor: pointer;
     }
 }
+
+main{
+    max-width: 955px;
+    margin: auto;
+}
+
+footer{
+    background-color: white;
+    padding: 5px 0px;
+    nav{
+        font-family: 'Work Sans';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 16px;
+        max-width: 1226px;
+    }
+}
